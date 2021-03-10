@@ -1,6 +1,5 @@
 import React, { useState, useEffect } from "react";
 
-import Grid from "@material-ui/core/Grid";
 import styled from "styled-components";
 import Slider from "@material-ui/core/Slider";
 import VolumeDown from "@material-ui/icons/VolumeDown";

@@ -19,7 +19,6 @@ const sounds = {
   ],
 };
 
-export default (req, res) => {
-  const { categoryId } = req.query;
+export default ({ query: { categoryId } }, res) => {
   res.status(200).json(sounds[categoryId]);
 };
