@@ -4,5 +4,12 @@ export function getSounds(categoryId) {
     headers: {
       "Content-Type": "application/json",
     },
-  }).then((data) => data.json());
+  })
+    .then((data) => {
+      return data.json();
+    })
+    .then((data) => {
+      console.log("fff", data);
+      return data;
+    });
 }

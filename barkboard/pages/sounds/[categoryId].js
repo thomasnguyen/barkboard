@@ -22,6 +22,7 @@ export default function Sound() {
   const loadSounds = async () => {
     const categoryId = window.location.pathname.split("/")[2];
     getSounds(categoryId).then((sounds) => {
+      console.log("f", { sounds });
       setSounds(sounds);
     });
   };
@@ -37,7 +38,7 @@ export default function Sound() {
   return (
     <Container>
       {sounds.map((sound) => {
-        return <SoundKey sound={sound} volume={volume} />;
+        return <SoundKey sound={sound} volume={volume} key={sound.label} />;
       })}
 
       <SoundSettings volume={volume} setVolume={setVolume} />

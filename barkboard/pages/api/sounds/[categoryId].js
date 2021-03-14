@@ -20,5 +20,6 @@ const sounds = {
 };
 
 export default ({ query: { categoryId } }, res) => {
+  console.log("re", sounds[categoryId]);
   res.status(200).json(sounds[categoryId]);
 };

@@ -29,9 +29,10 @@ const BackButton = styled.div`
 
 export default function Header({ ...props }) {
   const router = useRouter();
+  const showBackButton = router.asPath !== "/";
 
   const goBack = () => {
-    const path = window.document.location.pathname.split("/");
+    const path = router.asPath.split("/");
 
     // remove last
     path.pop();
@@ -40,8 +41,6 @@ export default function Header({ ...props }) {
 
     router.push("/");
   };
-
-  const showBackButton = window.document.location.pathname !== "/";
 
   return (
     <>

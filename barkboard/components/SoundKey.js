@@ -17,6 +17,7 @@ export default function SoundKey(props) {
   const [play] = useSound(props.sound.audioFile, {
     interrupt: true,
     volume: props.volume * 0.01,
+    interrupt: true,
   });
 
   return <Button onClick={() => play()}>{props.sound.label}!</Button>;
